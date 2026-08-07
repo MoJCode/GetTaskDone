@@ -7,8 +7,10 @@
         <!-- Use white icons in the status bar -->
         <item name="android:windowLightStatusBar">false</item>
 
-        <!-- Use a light navigation bar -->
-        <item name="android:windowLightNavigationBar">true</item>
+        <!-- Use a light navigation bar on supported Android versions -->
+        <item
+            name="android:windowLightNavigationBar"
+            tools:targetApi="27">true</item>
 
     </style>
 
