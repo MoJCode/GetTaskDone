@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Application colors -->
+    <color name="primary_purple">#6C63FF</color>
+    <color name="light_purple">#F2F0FF</color>
+    <color name="screen_background">#F8F9FC</color>
+
+    <!-- Text colors -->
+    <color name="main_text">#1F1F1F</color>
+    <color name="secondary_text">#6B6B6B</color>
+
+    <!-- Priority colors -->
+    <color name="priority_high">#EF4444</color>
+    <color name="priority_medium">#F59E0B</color>
+    <color name="priority_low">#22C55E</color>
+
+    <!-- Other colors -->
+    <color name="delete_red">#EF4444</color>
+    <color name="card_border">#DDDDDD</color>
+
+</resources>

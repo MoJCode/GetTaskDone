@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout for one task -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="2dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <!-- Top section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Completion checkbox -->
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkCompleted"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/task_completed"
+                android:gravity="center"
+                app:buttonTint="@color/primary_purple"
+                app:buttonIconTint="@color/white"
+                app:useMaterialThemeColors="false" />
+
+            <!-- Task title -->
+            <TextView
+                android:id="@+id/txtTaskCardTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/main_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Finish IT487 Project" />
+
+            <!-- Priority badge -->
+            <TextView
+                android:id="@+id/txtTaskCardPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/priority_high_background"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="HIGH" />
+
+        </LinearLayout>
+
+        <!-- Task description -->
+        <TextView
+            android:id="@+id/txtTaskCardDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:textColor="@color/secondary_text"
+            android:textSize="15sp"
+            tools:text="Build an Android application using Java." />
+
+        <!-- Completion message -->
+        <TextView
+            android:id="@+id/txt_completed_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/task_completed"
+            android:textColor="@color/primary_purple"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Delete task button -->
+        <ImageButton
+            android:id="@+id/btnDeleteTask"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/delete_task"
+            android:padding="12dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/delete_red" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Main tasks page -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_purple"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!-- Main page background -->
+    <View
+        android:id="@+id/mainBodyBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/screen_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMainTitle"/>
+
+    <!-- Page header -->
+    <TextView
+        android:id="@+id/txtMainTitle"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="@color/primary_purple"
+        android:gravity="center"
+        android:text="@string/my_tasks"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- User greeting -->
+    <TextView
+        android:id="@+id/txtGreeting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/hello_user"
+        android:textColor="@color/main_text"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMainTitle" />
+
+    <!-- Small message -->
+    <TextView
+        android:id="@+id/txtTaskSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/task_subtitle"
+        android:textColor="@color/secondary_text"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtGreeting" />
+
+    <!-- Search section -->
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTaskSubtitle">
+
+        <!-- Search input -->
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/primary_purple"
+            android:hint="@string/search_hint"
+            android:inputType="text"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/main_text"
+            android:textColorHint="@color/secondary_text"
+            android:textSize="15sp" />
+
+        <!-- Search button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:text="@string/search_button"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/primary_purple"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+
+    <!-- Show all tasks button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShowAll"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/show_all_tasks"
+        android:textColor="@color/primary_purple"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchLayout"
+        app:strokeColor="@color/primary_purple"
+        app:strokeWidth="1dp" />
+
+    <!-- List title -->
+    <TextView
+        android:id="@+id/txtRecentTasks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/recent_tasks"
+        android:textColor="@color/primary_purple"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnShowAll" />
+
+    <!-- Task list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/txtRecentTasks"
+        app:layout_constraintBottom_toTopOf="@id/fabAddTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Add task floating button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:contentDescription="@string/add_task"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/primary_purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

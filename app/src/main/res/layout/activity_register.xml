@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Register page layout -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_purple"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/screen_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Page title -->
+        <TextView
+            android:id="@+id/txtRegisterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/register_title"
+            android:textColor="@color/primary_purple"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Application logo -->
+        <ImageView
+            android:id="@+id/imgRegister"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/gettaskdone_logo_tr" />
+
+        <!-- Main heading -->
+        <TextView
+            android:id="@+id/txtCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/create_account"
+            android:textColor="@color/main_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Register message -->
+        <TextView
+            android:id="@+id/txtRegisterMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/register_message"
+            android:textColor="@color/secondary_text"
+            android:textSize="15sp" />
+
+        <!-- Full name label -->
+        <TextView
+            android:id="@+id/txtFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/full_name"
+            android:textColor="@color/main_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Full name input -->
+        <EditText
+            android:id="@+id/editFullName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/primary_purple"
+            android:hint="@string/full_name_hint"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="@color/main_text"
+            android:textColorHint="@color/secondary_text"
+            android:textSize="16sp" />
+
+        <!-- Register button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/register_button"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/primary_purple"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
+
+</ScrollView>

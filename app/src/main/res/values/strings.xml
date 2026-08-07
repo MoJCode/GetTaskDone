@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application name -->
+    <string name="app_name">GetTaskDone</string>
+
+    <!-- Register screen -->
+    <string name="register_title">REGISTER</string>
+    <string name="create_account">Create Your Account</string>
+    <string name="register_message">Enter your name to get started</string>
+    <string name="full_name">Full Name</string>
+    <string name="full_name_hint">Enter your full name</string>
+    <string name="register_button">REGISTER</string>
+
+    <!-- Main screen -->
+    <string name="my_tasks">MY TASKS</string>
+    <string name="hello_user">Hello,</string>
+    <string name="recent_tasks">RECENT TASKS</string>
+    <string name="all_tasks">ALL TASKS</string>
+    <string name="search_results">SEARCH RESULTS</string>
+    <string name="search_hint">Search tasks by title</string>
+    <string name="search_button">SEARCH</string>
+    <string name="show_all_tasks">SHOW ALL TASKS</string>
+    <string name="add_task_button">+</string>
+    <!-- Main screen message -->
+    <string name="task_subtitle">Here are your tasks</string>
+
+    <!-- Add task screen -->
+    <string name="add_task_title">ADD TASK</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_title_hint">Enter task title</string>
+    <string name="description">Description</string>
+    <string name="description_hint">Enter task description</string>
+    <string name="priority">Priority</string>
+    <string name="select_priority">Select priority</string>
+    <string name="add_task">ADD TASK</string>
+
+    <!-- Task card -->
+    <string name="task_completed">Task completed!</string>
+    <string name="delete_task">Delete task</string>
+
+    <!-- Priority values -->
+    <string name="priority_high">HIGH</string>
+    <string name="priority_medium">MEDIUM</string>
+    <string name="priority_low">LOW</string>
+
+    <!-- Dialog -->
+    <string name="delete_dialog_title">Delete this task?</string>
+    <string name="delete_dialog_message">Are you sure you want to delete this task?</string>
+    <string name="cancel">CANCEL</string>
+    <string name="delete">DELETE</string>
+
+    <!-- Messages -->
+    <string name="enter_name_message">Please enter your name</string>
+    <string name="task_added_message">Task added successfully</string>
+    <string name="task_deleted_message">Task deleted successfully</string>
+    <!-- Add task messages -->
+    <string name="enter_task_details">Please enter the task title and description</string>
+    <string name="select_priority_message">Please select a priority</string>
+
+    <!-- Priority dropdown values -->
+    <string-array name="priority_options">
+        <item>@string/select_priority</item>
+        <item>@string/priority_high</item>
+        <item>@string/priority_medium</item>
+        <item>@string/priority_low</item>
+    </string-array>
+
+    <!--  Back Arrow  -->
+    <string name="back">Back</string>
+
+    <!-- Show recent tasks button -->
+    <string name="show_recent_tasks">SHOW RECENT TASKS</string>
+
+    <!-- Search messages -->
+    <string name="enter_search_title">Please enter a task title</string>
+    <string name="no_tasks_found">No matching tasks found</string>
+
+    <string name="add_task_icon_description">Add task icon</string>
+
+</resources>
