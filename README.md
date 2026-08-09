@@ -71,6 +71,33 @@ The application performs the following SQLite operations:
 - Search
 - Delete
 
+## Application Screens
+
+The application contains three main Activities:
+
+### Register Screen
+
+Allows the user to enter and save a full name.
+
+### Main Screen
+
+Displays the user's tasks using RecyclerView and CardView. The user can view recent tasks, show all tasks, search, mark tasks as completed, and delete tasks.
+
+### Add Task Screen
+
+Allows the user to enter a task title, description, and priority before saving the task to SQLite.
+
+## Task Priorities
+
+Tasks can have one of three priority levels:
+
+* HIGH
+* MEDIUM
+* LOW
+
+Each priority is displayed using a different color to make tasks easier to identify.
+
+
 ## Course
 
 **Course:** IT487 – Mobile Application Development  
